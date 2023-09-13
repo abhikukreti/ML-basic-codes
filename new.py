@@ -15,14 +15,12 @@ y = data['Label']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-clf = DecisionTreeClassifier()
+clf = DecisionTreeClassifier() //classifier model
 
 
 clf.fit(X_train, y_train)
 
-
-y_pred = clf.predict(X_test)
-
+y_pred = clf.predict(X_test)//predict 
 
 accuracy = accuracy_score(y_test, y_pred)
 report = classification_report(y_test, y_pred)
